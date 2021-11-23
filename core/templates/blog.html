@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="offers">
+        <div class="container">
+            <div class="offer-top">
+                <div class="top-bg-color"></div>
+                <h2 style="margin-top:14%; font-size:29px;">Xəbərlər</h2>
+            </div>
+            <div class="row">
+            {% for blog in blog_list %}
+            {% if blog.is_published %}
+                <div class="col-md-4">
+                    <div class="single-offer" data-aos="fade-up" data-aos-duration="1500">
+                        <div class="sf-img">
+                        <a href="{{blog.get_absolute_url}}">
+                            <img src="{{ blog.cover_image.url }}" alt="">
+                        </a>
+                        </div>
+                        <div class="sf-text">
+                        <a href="{{blog.get_absolute_url}}">
+                            <h6>{{blog.title}}</h6>
+                        </a>
+                        </div>
+                        <div>
+                        <p>{{blog.created_at}}</p>
+                        </div>
+                        
+                    </div>
+                </div>
+                {% endif %}
+            {% endfor %}
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock  %}

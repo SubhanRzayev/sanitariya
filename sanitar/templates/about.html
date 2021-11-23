@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% load static i18n%}
+{% block content %}
+			
+			 
+
+			<div class="container">
+				<div class="row">
+					<div class=" abut col-lg-12">
+						<div class="title-box" style="background-image: url('/static/img/hero/inner-hero.jpg');">
+							<h3>Haqqımızda</h3>
+							<h3>2015-ci ildən fəaliyyət göstəririk</h3>
+						</div>
+					</div>
+				</div>
+				<div class="row mobilemargin">
+					<div class="col-lg-12 col-md-12 col-sm-12 mt-3">
+						<div class="row align-items-center about-main-info">
+							<div class="col-lg-6 col-md-6 col-sm-12">
+							{% for about in about_list %}
+								<h4>{{about.title}}</h4>
+								<p>{{about.description}} </p>
+								<p>{{about.description}} </p>
+								<a href="#" class="new-btn-d br-2">Read More</a>
+							
+							</div>
+							<div class="col-lg-6 col-md-6 col-sm-12">
+								<div class="about-m">
+								<img src="{{about.about_image.url}}" alt="">
+								</div>
+							{% endfor %}
+									
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+{% endblock  %}

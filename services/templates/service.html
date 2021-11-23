@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load static i18n %}
+{% block content %}
+    <div class="services">
+    
+        <div class="service">
+        
+            <div class="section-header">
+                <center><h3>Xidmətlərimiz</h3></center>
+            </div>
+                
+            
+            <div class="row">
+                {% for service in services_list %}
+                {% if service.is_published %}
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="service-item">
+                    
+                        <img src="{{service.cover_image.url}}" alt="Service">
+                        <h3>{{service.title}}</h3>
+                        <p>
+                            {{service.description|truncatewords:"30"}}
+                        </p>
+                        <a class="btn" href="{{service.get_absolute_url}}">Ətraflı</a>
+                    </div>
+                </div>
+                {% endif %}
+                {% endfor %}
+                
+            </div>
+        
+        </div>
+    </div>
+
+{% endblock  %}

@@ -1,0 +1,151 @@
+{% load static i18n %}
+{% load custom_tags  %}
+
+<header class="header-area" style="background-color:cornflowerblue; width:100%;">
+    
+    <div class="container">
+        <div class="row flex justify-content-center mt-5">
+            
+            <div class="col-3 col-md-3 ">
+                <a href="{% url 'sanitar:index' %}">
+                    <img src="{% static 'img/logo.png' %}" alt="" style="width: 180px;">
+                </a>
+            </div>
+            <div class="col-7 col-md-7">
+                <div class="col-md-12 d-none d-md-block" style="margin-top:35px;">
+                    <center><text style="margin-top:37px;font-size: 27px;color:#FFF;font-weight:bolder;">{% trans "Sanitariya Gigiyena Dezinfeksiya Xidmətləri" %}</text></center>
+                </div>
+                <div class="col-md-12 mt-5">
+                    <input id="main-menu-state" type="checkbox" />
+                    <label class="main-menu-btn" for="main-menu-state">
+                        <span class="main-menu-btn-icon"></span>
+                    </label>
+
+                    
+
+                    <ul id="main-menu" class="sm sm-mint">
+                            
+
+                        <li>
+                            <a href="{% url 'sanitar:index' %}">{% trans "Ana Səhifə" %}</a>
+                        </li>
+
+                        <li>
+                            <a href="{% url 'services:service' %}">{% trans "Xidmətlər" %}</a>
+                            
+                            {% servic as context %}
+                            <ul>
+                            {% for i in context %}
+                                <li>    
+                                    <a href="{{i.get_absolute_url}}">
+                                        {{i.title}}
+
+                                    </a>
+                                </li>
+                               
+                            {% endfor %}
+                            </ul>
+                        </li>
+                        
+                        
+                        <li>
+                            <a href="{% url 'product:products' %}">{% trans "Məhsullar" %}</a>
+                        </li>
+                        <li>
+                            <a href="{% url 'sanitar:about' %}">{% trans "Haqqımızda" %}</a>
+                        </li>
+
+                        <li>
+                            <a href="{% url 'core:blog' %}">{% trans "Xəbərlər" %}</a>
+                        </li>
+
+                        <li>
+                            <a href="{% url 'core:contact' %}">{% trans "Əlaqə" %}</a>
+
+                        </li>
+                <div class="lang">
+                    <form action="{% url 'set_language' %}" method="post">  {#2#}
+                        {% csrf_token %}  {#3#}
+                        <select name="language">  {#4#}
+                            {% get_current_language as LANGUAGE_CODE %}  {#5#}
+                            {% get_available_languages as LANGUAGES %}  {#6#}
+                            {% get_language_info_list for LANGUAGES as languages %}  {#7#}
+                            {% for language in languages %}
+                                <option value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %} selected{% endif %}>  {#8#}
+                                    {{ language.name_local }} ({{ language.code }})
+                                </option>
+                            {% endfor %}
+                        </select>
+                        <input type="submit" value="Change" style="padding:0px 5px;">
+                    </form>
+                </div>
+                    
+                    </nav>
+                </div>
+            </div>
+            
+            <div class="hexa-nav d-none d-md-block " style="margin-top:55px;">
+                <div class="menu-wrapper">
+                    <nav class="main-nav">
+                                                        
+                        
+
+                        <div class="topbar pl-2 mt-3">
+
+                        
+                            <div class="topbar-col">
+                                <a href="tel:+ 70 209 40 48"><i class="fab fa-whatsapp"
+                                        style="font-size:30px;margin-left: 10px;"></i></a>
+                                <a href="mailto:info@sanitariya-gigiyena.az"><i class="fa fa-envelope" style="font-size:25px;margin-left: 10px;"></i></a>
+                                    <a href=""><i class="fab fa-facebook-f ml-2" style="font-size:25px"></i></a>
+                                    <a href=""><i class="fab fa-youtube" style="font-size:25px"></i></a>
+                                    <a href=""><i class="fab fa-instagram" style="font-size:25px"></i></a>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+
+            </div>
+              
+
+            <div class="hexa-nav mob-social">
+                <div class="menu-wrapper">
+                    <nav class="main-nav">
+                        
+                        <div class="topbar pl-2 mt-3">
+                            <div class="topbar-col">
+                                <a href="tel:+994554001609"><i class="fab fa-whatsapp"
+                                        style="font-size:25px;margin-left: 10px;"></i></a>
+                            </div>
+
+                            <div class="topbar-col">
+                                <a href="mailto:info@sanitariya-gigiyena.az"><i class="fa fa-envelope"
+                                        style="font-size:25px;margin-left: 10px;"></i></a>
+                            </div>
+                            <div class="topbar-col">
+                                <div class="topbar-social">
+                                    <a href=""><i class="fab fa-facebook-f ml-2" style="font-size:25px"></i></a>
+                                    <a href=""><i class="fab fa-youtube" style="font-size:25px"></i></a>
+                                    <a href=""><i class="fab fa-instagram" style="font-size:25px"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+
+            </div>
+             
+        </div>
+        <div class="row">
+            
+
+            <center>
+            <div class="col-md-12 d-sm-block d-md-none">
+                <text style="font-size: 15px;color:#FFF;font-weight:bolder;">{% trans "Sanitariya Gigiyena Dezinfeksiya Xidmətləri" %}</text>
+            </div>
+            </center>
+        </div>
+    </div>
+
+
+</header>

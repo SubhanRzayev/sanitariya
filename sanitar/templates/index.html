@@ -1,0 +1,289 @@
+{% extends 'base.html' %}
+{% load static i18n %}
+{% load custom_tags  %}
+
+{% block content  %}
+
+
+<div class="allll">
+
+<div class="all">
+
+<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel" style="background-color: azure;">
+<div class="section-header">
+                <h4 style="text-align: center;">{% trans "Komandamız" %}</h4>
+            </div>
+     <div class="carousel-inner">
+     
+        <div class="carousel-item active">
+        <img class="d-block w-100" src="{% static 'img/hero/inner-hero.jpg' %}" alt="First slide">
+    </div>
+</div>
+    <div class="container">
+    <div class="protect-content" >
+                        <h2>{% trans "Sanitariya Gigiyena Dezinfeksiya Xidmətləri" %}</h2>
+                        
+                        <p>{% trans "Prezidentimizin imzaladığı “Sanitariya Epidemioloji Salamatlıq haqqında” və “Yanğın təhlükəsizliyi haqqında” qanunları rəhbər tutaraq cəmiyyətimiz “Sağlam mühit, Sağlam gələcək” şüarı altında fəaliyyət göstərir. Müəssisələrdə Dezinfeksiya, Dezinseksiya, Deratizasiya tədbirlərinin həyata keçirilməsi üçün xidmətimizi təklif edirik." %}</p>
+                        <ul>
+                            <li><i class="flaticon-checkmark"></i>{% trans "Dezinfeksiya" %}</li><br>
+                            <span>
+                               {% trans " Dezinfeksiya – bakteriya, virus və göbələklərin məhv edilməsi prosesidir.Xəstəliklər hər zaman soyuq havadan, fəsil dəyişməsindən, yanımızdakı insanın xəstələnməsindən yaranmır." %}</span><br>
+                            
+                            <li><i class="flaticon-checkmark"></i>{% trans "Deratizasiya" %}</li><br>
+                            
+                                <span>{% trans "Insanlara epidemioloji və iqtisadi ziyan verən gəmiricilərə qarşı aparılan mübarizə tədbiridir." %}</span>
+                            
+                            <li><i class="flaticon-checkmark"></i>{% trans "Hava Epidemiyası əleyhinə görülməli profilaktik tədbirlə" %}</li><br>
+                            
+                                <span>{% trans "Ventilasiya (hava kanallarında) yığılmış tozlar-bakteriya,göbələk xəstəliyi,həşərat və digər zərərli mikroorqanizmlərin coxalması üçün şərait yaradır." %}</span><br>
+                            
+                            <li><i class="flaticon-checkmark"></i>{% trans "Mətbəxlərdə yağlı kanallarin " %}</li><br>
+                            
+                                <span>{% trans "Yağlı kanal içərisinə toplanmış yağ açıq alov alaraq yanması nəticəsində yaranan istilik 10000 C-dən yüksək olur və bu yanğın  riskini artırır." %}</span>
+                            
+                            <li><i class="flaticon-checkmark"></i>{% trans "tüstü bacalarının mütəmadi təmizlənməsi" %}</li>
+                            
+                                <span>{% trans "Bütün bu işlər xüsusi müasir cihaz-avadanlıqlar və ən əsası peşəkar mühəndis-texniki heyət tərəfindən icra olunur." %}</span><br>
+                            
+                            <li><i class="flaticon-checkmark"></i>{% trans "Dezinseksiya" %}</li>
+                        
+                                <span>{% trans "infeksion xəstəlikləri yayan həşəratların tələf edilməsidir.Dezinseksiya həm məişətdə, həm də epidemiyaların qarşısını almaq üçün aparılır." %}</span><br>
+
+                            <li><i class="flaticon-checkmark"></i>{% trans "Dezodorasiya" %}</li><br>
+                        
+                                <span>{% trans "Dezodarasiya xidməti (aromatizasiya) olduğu halda obyektdə olan kəskin xoşagəlməz qoxuların aradan qaldırılmasıdır." %}</span>
+
+                            <li><i class="flaticon-checkmark"></i>{% trans "Temizlenme (Clining) Xidmeti" %}</li><br>
+
+                        </ul>
+                        <div class="protect-links">
+                            <div class="single-link">
+                            {% footer_information as context %}
+                            {% for i in context %}
+                                <a href="tel:+994 55 400 16 09" class="cal-num"> <i class="flaticon-phone-call"></i>
+                                    {{i.phone}}
+                                </a>
+                            {% endfor %}
+                            </div>
+                            <div class="single-link">
+                                <a href="{% url 'sanitar:about' %}" class="btn-3">{% trans "Haqqımızda" %} <i class="flaticon-right-arrow"></i>
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>  
+              
+    <div class="service">
+            <div class="section-header">
+                <h3 style="text-align: center;">{% trans "Xidmətlərimiz" %}</h3>
+            </div>
+                
+            <div class="row">
+                    {% for service in services_list %}
+                    {% if service.is_published %}
+                <div class="col-lg-3 col-md-6">
+                    <div class="service-item">
+                        <img src="{{service.cover_image.url}}" alt="Service">
+                        <p>{{service.title}}</p>
+                        <p>
+                            {{service.description|truncatewords:"30"}}
+                        </p>
+                        <a class="btn" href="{{service.get_absolute_url}}">{% trans "Ətraflı" %}</a>
+                    </div>
+                </div>
+                {% endif %}
+                {% endfor %}
+            </div>
+    </div>
+</div>
+<div class="service">
+        
+    <div class="section-header">
+        <h3 style="text-align: center;">{% trans "Məhsullarımız" %}</h3>
+    </div>
+        
+    <div class="row">
+    {% for product in product_list %}
+    {% if product.is_published %}
+        <div class="col-lg-3 col-md-6">
+            <div class="service-item">
+                <img src="{{product.cover_image.url}}" alt="Service">
+                <h3>{{product.title}}</h3>
+                <p>
+                    {{product.description}}
+                </p>
+                <a class="btn" href="{{product.get_absolute_url}}">{% trans "Ətraflı" %}</a>
+            </div>
+        </div>
+
+    {% endif %}
+    {% endfor %}
+        
+
+</div>
+
+    <!-- <div class="protect" data-aos="fade-up" data-aos-duration="1500" style="margin-top: 0;">
+        
+            <div class="row ">
+                <div class="col-md-5">
+                    <div class="protect-img">
+                        <img src="{% static 'img/about/protect-img1.png' %}" alt="">
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="protect-content">
+                        <h2>Sanitariya Gigiyena<br>
+                            Dezinfeksiya Xidmətləri
+                        </h2>
+                        <p>
+                            Prezidentimizin imzaladığı “Sanitariya Epidemioloji Salamatlıq haqqında” və “Yanğın
+                            təhlükəsizliyi haqqında” qanunları rəhbər tutaraq cəmiyyətimiz “Sağlam mühit, Sağlam gələcək”
+                            şüarı altında fəaliyyət göstərir. Müəssisələrdə Dezinfeksiya, Dezinseksiya, Deratizasiya
+                            tədbirlərinin həyata keçirilməsi üçün xidmətimizi təklif edirik.
+                        </p>
+                        <ul>
+                            <li><i class="flaticon-checkmark"></i>Dezinfeksiya</li>
+                            <a href=""><span>
+                                Dezinfeksiya – bakteriya, virus və göbələklərin məhv edilməsi prosesidir.Xəstəliklər hər zaman soyuq havadan, fəsil dəyişməsindən, yanımızdakı insanın xəstələnməsindən yaranmır.</span>
+                            </a>
+                            <li><i class="flaticon-checkmark"></i>Deratizasiya</li>
+                            <a href="">
+                                <span>Insanlara epidemioloji və iqtisadi ziyan verən gəmiricilərə qarşı aparılan mübarizə tədbiridir.</span>
+                            </a>
+                            <li><i class="flaticon-checkmark"></i>Hava Epidemiyası əleyhinə görülməli profilaktik tədbirlə</li>
+                            <a href="">
+                                <span>Ventilasiya (hava kanallarında) yığılmış tozlar-bakteriya,göbələk xəstəliyi,həşərat və digər zərərli mikroorqanizmlərin coxalması üçün şərait yaradır.</span>
+                            </a>
+                            <li><i class="flaticon-checkmark"></i>Mətbəxlərdə yağlı kanallarin </li>
+                            <a href="">
+                                <span>Yağlı kanal içərisinə toplanmış yağ açıq alov alaraq yanması nəticəsində yaranan istilik 10000 C-dən yüksək olur və bu yanğın  riskini artırır. </span>
+                            </a>
+                            <li><i class="flaticon-checkmark"></i>tüstü bacalarının mütəmadi təmizlənməsi</li>
+                            <a href="">
+                                <span>Bütün bu işlər xüsusi müasir cihaz-avadanlıqlar və ən əsası peşəkar mühəndis-texniki heyət tərəfindən icra olunur.</span>
+                            </a>
+                        </ul>
+                        <div class="protect-links">
+                            <div class="single-link">
+                            {% footer_information as context %}
+                            {% for i in context %}
+                                <a href="tel:+994 55 400 16 09" class="cal-num"> <i class="flaticon-phone-call"></i>
+                                    {{i.phone}}
+                                </a>
+                            {% endfor %}
+                            </div>
+                            <div class="single-link">
+                                <a href="{% url 'sanitar:about' %}" class="btn-3">Haqqımızda <i class="flaticon-right-arrow"></i>
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+    </div> -->
+
+<!-- 
+    <div class="covid-protecttion">
+        <div class="container">
+            <div class="cp-top">
+                <div class="top-bg-color"></div>
+                <h2>Xidmətlərimiz</h2>
+            </div>
+            <div class="row">
+            {% for service in services_list %}
+                <div class="col-md-4">
+                    <div class="single-offer" data-aos="fade-up" data-aos-duration="1500">
+                        <div class="sf-img">
+                        <a href="{{service.get_absolute_url}}">
+                            <img src="{{ service.cover_image.url }}" alt="">
+                        </a>
+                        </div>
+                        <div class="sf-text" style="margin-top: 20px;">
+                            <h6 style="color: #fafafa;">{{service.title}}</h6>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+            </div>
+        </div>
+    </div>
+    <div class="offers">
+        <div class="container">
+            <div class="offer-top">
+                <div class="top-bg-color"></div>
+                <h2>Kategoriyalarımız</h2>
+            </div>
+            <div class="row">
+            {% for category in category_list %}
+                <div class="col-md-4">
+                    <div class="single-offer" data-aos="fade-up" data-aos-duration="1500">
+                        <div class="sf-img">
+                        <a href="{{category.get_absolute_url}}">
+                            <img src="{{ category.image.url }}" alt="">
+                        </a>
+                        </div>
+                        <div class="sf-text">
+                            <h6>{{category.title}}</h6>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+                
+            </div>
+        </div>
+    </div>
+</div> -->
+
+
+<!-- <div class="offers">
+    <div class="container">
+        <div class="offer-top">
+            <div class="top-bg-color"></div>
+            <h2>Məhsullarımız</h2>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="single-offer" data-aos="fade-up" data-aos-duration="1500">
+                    <div class="sf-img">
+                        <img src="{% static 'img/blog/offer1.jpg' %}" alt="">
+                    </div>
+                    <div class="sf-text">
+                        <h6>Məhsul 1</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="single-offer" data-aos="fade-up" data-aos-duration="2000">
+                    <div class="sf-img">
+                        <img src="{% static 'img/blog/offers2.jpg' %}" alt="">
+                    </div>
+                    <div class="sf-text">
+                        <h6>Məhsul 2</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="single-offer" data-aos="fade-up" data-aos-duration="3000">
+                    <div class="sf-img">
+                        <img src="{% static 'img/blog/offer3.jpg' %}" alt="">
+                    </div>
+                    <div class="sf-text">
+                        <h6>Məhsul 3</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div> -->
+
+</div>
+{% endblock  %}
+
+
+
+

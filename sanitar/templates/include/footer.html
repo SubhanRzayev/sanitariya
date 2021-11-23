@@ -1,0 +1,150 @@
+{% load static %}
+{% load custom_tags i18n %}
+
+
+<div class = "container">
+
+<div class="footer-area">
+    <div class="container">
+        <div class="footer-top" data-aos="fade-up" data-aos-duration="1000">
+            <h4>
+                Sanitariya Gigiyena Dezinfeksiya Xidmətləri
+            </h4>
+            {% footer_information as context %}
+            {% for i in context %}
+            <a href="tel:+994 55 400 16 09" class="btn-1">
+                <i class="flaticon-phone-call"></i>
+                {{i.phone}}
+            </a>
+            {% endfor %}
+            <a href="#" class="btn-2">
+                {% trans "Əlaqə" %} <i class="flaticon-right-arrow"></i>
+            </a>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="footer-logo-area">
+                    <img src="{% static 'img/logo.png' %}" alt="" style="width: 180px;">
+
+                    <ul style="margin-top: 20px;">
+                        <li><a href="https://www.facebook.com/"><i class="flaticon-facebook-logo"></i> </a></li>
+                        <li><a href="https://www.instagram.com/"><i class="flaticon-instagram"></i> </a></li>
+                        <li><a href="https://www.linkedin.com/"><i class="flaticon-linkedin"></i> </a></li>
+                        <li><a href="https://twitter.com/"><i class="flaticon-twitter"></i> </a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-9">
+                <div class="footer-pages">
+                    <div class="page-links">
+                        <h6>{% trans "Xidmətlər" %}</h6>
+                        {% servic as context %}
+                        <ul>
+                        {% for i in context %}
+                            <li>
+                                <a href="#">
+                                    <i class="flaticon-play-filled-triangle-button-of-right-arrow"></i>
+                                    {{i.title}}
+                                </a>
+                            </li>
+                        {% endfor %}
+                        </ul>
+                    </div>
+                    <div class="page-links">
+                        <h6>{% trans "Məhsullar" %}</h6>
+                        
+                        {% footer_products as context %}
+                        <ul>
+                        {% for a in context %}
+                            <li>
+                                <a href="#">
+                                    <i class="flaticon-play-filled-triangle-button-of-right-arrow"></i>
+                                    {{a.title}}
+                                </a>
+                            </li>
+                        {% endfor %}
+                        </ul>
+                    </div>
+                         
+                    <div class="page-links">
+                        <h6>{% trans "Keçidlər" %}</h6>
+                        <ul>
+                            <li>
+                                <a href="{% url 'sanitar:index' %}">
+                                    <i class="flaticon-play-filled-triangle-button-of-right-arrow"></i>
+                                    {% trans "Ana Səhifə" %}
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{% url 'core:blog' %}">
+                                    <i class="flaticon-play-filled-triangle-button-of-right-arrow"></i>
+                                    {% trans "Xəbərlər" %}
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{% url 'services:service' %}">
+                                    <i class="flaticon-play-filled-triangle-button-of-right-arrow"></i>
+                                    {% trans "Xidmətlər" %}
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="flaticon-play-filled-triangle-button-of-right-arrow"></i>
+                                    {% trans "Xəstəliklər haqqında" %}
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{% url 'product:products' %}">
+                                    <i class="flaticon-play-filled-triangle-button-of-right-arrow"></i>
+                                    {% trans "Məhsullar" %}
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{% url 'sanitar:about' %}">
+                                    <i class="flaticon-play-filled-triangle-button-of-right-arrow"></i>
+                                    {% trans "Haqqımızda" %}
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{% url 'core:contact' %}">
+                                    <i class="flaticon-play-filled-triangle-button-of-right-arrow"></i>
+                                    {% trans "Əlaqə" %}
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="page-links">
+                        <h6>{% trans "Əlaqə" %}</h6>
+                        {% footer_information as context %}
+                        <ul>
+                        {% for i in context  %}
+                            <li>
+                                <i class="flaticon-place con-icon"></i>
+                                {{i.street}}
+                            </li>
+                            <li>
+                                <i class="flaticon-email con-icon"></i>
+                                <a href="mailto:info@sanitariya-gigiyena.az">{{i.address}} </a>
+                            </li>
+                            <li>
+                                <i class="flaticon-phone con-icon"></i>
+                                <a href="tel:+994 55 400 16 09">{{i.phone}}</a>
+                            </li>
+                        {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+
+<footer>
+    <div class="container">
+        <p>© 2021 <a href="#" target="blank">Sanitariya-gigiyena.az</a> | Bütün hüquqları qorunur
+        </p>
+    </div>
+</footer>
+

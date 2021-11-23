@@ -1,0 +1,166 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-09-07 18:13+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: Sanitariya/settings.py:125
+msgid "Azerbaijani"
+msgstr ""
+
+#: Sanitariya/settings.py:126
+msgid "English"
+msgstr ""
+
+#: Sanitariya/settings.py:127
+msgid "Russia"
+msgstr ""
+
+#: sanitar/templates/include/footer.html:21
+#: sanitar/templates/include/footer.html:111
+#: sanitar/templates/include/footer.html:117
+#: sanitar/templates/include/header.html:60
+msgid "Əlaqə"
+msgstr ""
+
+#: sanitar/templates/include/footer.html:40
+#: sanitar/templates/include/footer.html:87
+#: sanitar/templates/include/header.html:30
+msgid "Xidmətlər"
+msgstr ""
+
+#: sanitar/templates/include/footer.html:54
+msgid "Kategoriyalar"
+msgstr ""
+
+#: sanitar/templates/include/footer.html:70
+msgid "Keçidlər"
+msgstr ""
+
+#: sanitar/templates/include/footer.html:75
+msgid "Səhifə"
+msgstr ""
+
+#: sanitar/templates/include/footer.html:81
+#: sanitar/templates/include/header.html:56
+msgid "Xəbərlər"
+msgstr ""
+
+#: sanitar/templates/include/footer.html:93
+msgid "Xəstəliklər haqqında"
+msgstr ""
+
+#: sanitar/templates/include/footer.html:99
+#: sanitar/templates/include/header.html:49
+msgid "Məhsullar"
+msgstr ""
+
+#: sanitar/templates/include/footer.html:105
+#: sanitar/templates/include/header.html:52 sanitar/templates/index.html:77
+msgid "Haqqımızda"
+msgstr ""
+
+#: sanitar/templates/include/header.html:26
+msgid "Ana Səhifə"
+msgstr ""
+
+#: sanitar/templates/include/header.html:46
+msgid "Clining xidməti"
+msgstr ""
+
+#: sanitar/templates/include/header.html:115
+msgid "Sanitariya Gigiyena Dezinfeksiya Xidmətləri"
+msgstr ""
+
+#: sanitar/templates/index.html:14
+msgid "Komandamız"
+msgstr ""
+
+#: sanitar/templates/index.html:34
+msgid "Dezinfeksiya"
+msgstr ""
+
+#: sanitar/templates/index.html:36
+msgid ""
+" Dezinfeksiya – bakteriya, virus və göbələklərin məhv edilməsi prosesidir."
+"Xəstəliklər hər zaman soyuq havadan, fəsil dəyişməsindən, yanımızdakı "
+"insanın xəstələnməsindən yaranmır."
+msgstr ""
+
+#: sanitar/templates/index.html:38
+msgid "Deratizasiya"
+msgstr ""
+
+#: sanitar/templates/index.html:40
+msgid ""
+"Insanlara epidemioloji və iqtisadi ziyan verən gəmiricilərə qarşı aparılan "
+"mübarizə tədbiridir."
+msgstr ""
+
+#: sanitar/templates/index.html:42
+msgid "Hava Epidemiyası əleyhinə görülməli profilaktik tədbirlə"
+msgstr ""
+
+#: sanitar/templates/index.html:44
+msgid ""
+"Ventilasiya (hava kanallarında) yığılmış tozlar-bakteriya,göbələk xəstəliyi,"
+"həşərat və digər zərərli mikroorqanizmlərin coxalması üçün şərait yaradır."
+msgstr ""
+
+#: sanitar/templates/index.html:46
+msgid "Mətbəxlərdə yağlı kanallarin "
+msgstr ""
+
+#: sanitar/templates/index.html:48
+msgid ""
+"Yağlı kanal içərisinə toplanmış yağ açıq alov alaraq yanması nəticəsində "
+"yaranan istilik 10000 C-dən yüksək olur və bu yanğın  riskini artırır."
+msgstr ""
+
+#: sanitar/templates/index.html:50
+msgid "tüstü bacalarının mütəmadi təmizlənməsi"
+msgstr ""
+
+#: sanitar/templates/index.html:52
+msgid ""
+"Bütün bu işlər xüsusi müasir cihaz-avadanlıqlar və ən əsası peşəkar mühəndis-"
+"texniki heyət tərəfindən icra olunur."
+msgstr ""
+
+#: sanitar/templates/index.html:54
+msgid "Dezinseksiya"
+msgstr ""
+
+#: sanitar/templates/index.html:59
+msgid "Dezodorasiya"
+msgstr ""
+
+#: sanitar/templates/index.html:64
+msgid "Temizlenme (Clining) Xidmeti"
+msgstr ""
+
+#: sanitar/templates/index.html:87
+msgid "Xidmətlərimiz"
+msgstr ""
+
+#: sanitar/templates/index.html:100 sanitar/templates/index.html:124
+msgid "Ətraflı"
+msgstr ""
+
+#: sanitar/templates/index.html:111
+msgid "Məhsullarımız"
+msgstr ""

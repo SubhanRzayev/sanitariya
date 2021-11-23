@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load static i18n %}
+{% load thumbnail %}
+
+{% block content %}
+
+
+<div class="services">
+        
+    <div class="service">
+        <div class="section-header">
+            <h3 style="text-align: center;">{% trans "Məhsullarımız" %}</h3>
+        </div>
+            
+        <div class="row">
+        {% for product in product_list %}
+        {% if product.is_published %}
+            <div class="col-lg-3 col-md-6">
+                <div class="service-item">
+                    <img src="{{product.cover_image.url}}" alt="Service">
+                    <h3>{{product.title}}</h3>
+                    <p>
+                        {{product.description}}
+                    </p>
+                    <a class="btn" href="{{product.get_absolute_url}}">{% trans "Ətraflı" %}</a>
+                </div>
+            </div>
+
+        {% endif %}
+        {% endfor %}
+            
+
+    </div>
+</div>
+
+{% endblock  %}

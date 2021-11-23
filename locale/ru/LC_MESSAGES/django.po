@@ -1,0 +1,193 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-09-07 21:31+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
+"%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: Sanitariya/settings.py:126
+msgid "Azerbaijani"
+msgstr ""
+
+#: Sanitariya/settings.py:127
+msgid "English"
+msgstr ""
+
+#: Sanitariya/settings.py:128
+msgid "Russia"
+msgstr ""
+
+#: product/templates/products.html:10 sanitar/templates/index.html:103
+msgid "Məhsullarımız"
+msgstr "Наши продукты"
+
+#: product/templates/products.html:23 sanitar/templates/index.html:92
+#: sanitar/templates/index.html:116
+msgid "Ətraflı"
+msgstr "Подробности"
+
+#: sanitar/templates/include/footer.html:21
+#: sanitar/templates/include/footer.html:111
+#: sanitar/templates/include/footer.html:117
+#: sanitar/templates/include/header.html:65
+msgid "Əlaqə"
+msgstr "Контакт"
+
+#: sanitar/templates/include/footer.html:40
+#: sanitar/templates/include/footer.html:87
+#: sanitar/templates/include/header.html:34
+msgid "Xidmətlər"
+msgstr "Услуги"
+
+#: sanitar/templates/include/footer.html:54
+#: sanitar/templates/include/footer.html:99
+#: sanitar/templates/include/header.html:54
+msgid "Məhsullar"
+msgstr "Продукты"
+
+#: sanitar/templates/include/footer.html:70
+msgid "Keçidlər"
+msgstr "Переходы"
+
+#: sanitar/templates/include/footer.html:75
+#: sanitar/templates/include/header.html:30
+msgid "Ana Səhifə"
+msgstr "Домашняя страница"
+
+#: sanitar/templates/include/footer.html:81
+#: sanitar/templates/include/header.html:61
+msgid "Xəbərlər"
+msgstr "Новости"
+
+#: sanitar/templates/include/footer.html:93
+msgid "Xəstəliklər haqqında"
+msgstr ""
+
+#: sanitar/templates/include/footer.html:105
+#: sanitar/templates/include/header.html:57 sanitar/templates/index.html:69
+msgid "Haqqımızda"
+msgstr "О нас"
+
+#: sanitar/templates/include/header.html:16
+#: sanitar/templates/include/header.html:146 sanitar/templates/index.html:24
+msgid "Sanitariya Gigiyena Dezinfeksiya Xidmətləri"
+msgstr "Услуги санитарно-гигиенической дезинфекции"
+
+#: sanitar/templates/include/header.html:51
+msgid "Clining xidməti"
+msgstr "Служба клининга"
+
+#: sanitar/templates/index.html:14
+msgid "Komandamız"
+msgstr "Наша команда"
+
+#: sanitar/templates/index.html:26
+msgid ""
+"Prezidentimizin imzaladığı “Sanitariya Epidemioloji Salamatlıq haqqında” və "
+"“Yanğın təhlükəsizliyi haqqında” qanunları rəhbər tutaraq cəmiyyətimiz "
+"“Sağlam mühit, Sağlam gələcək” şüarı altında fəaliyyət göstərir. "
+"Müəssisələrdə Dezinfeksiya, Dezinseksiya, Deratizasiya tədbirlərinin həyata "
+"keçirilməsi üçün xidmətimizi təklif edirik."
+msgstr ""
+
+#: sanitar/templates/index.html:28
+msgid "Dezinfeksiya"
+msgstr "Дезинфекция"
+
+#: sanitar/templates/index.html:30
+msgid ""
+" Dezinfeksiya – bakteriya, virus və göbələklərin məhv edilməsi prosesidir."
+"Xəstəliklər hər zaman soyuq havadan, fəsil dəyişməsindən, yanımızdakı "
+"insanın xəstələnməsindən yaranmır."
+msgstr ""
+"Дезинфекция - это процесс уничтожения бактерий, вирусов и грибков.Болезни "
+"всегда от холода, смены времен года, рядом с нами  не возникает из-за "
+"болезни человека."
+
+#: sanitar/templates/index.html:32
+msgid "Deratizasiya"
+msgstr "Дератизация"
+
+#: sanitar/templates/index.html:34
+msgid ""
+"Insanlara epidemioloji və iqtisadi ziyan verən gəmiricilərə qarşı aparılan "
+"mübarizə tədbiridir."
+msgstr ""
+"Проводится против грызунов, наносящих эпидемиологический и экономический "
+"ущерб человеку.это мера борьбы."
+
+#: sanitar/templates/index.html:36
+msgid "Hava Epidemiyası əleyhinə görülməli profilaktik tədbirlə"
+msgstr ""
+
+#: sanitar/templates/index.html:38
+msgid ""
+"Ventilasiya (hava kanallarında) yığılmış tozlar-bakteriya,göbələk xəstəliyi,"
+"həşərat və digər zərərli mikroorqanizmlərin coxalması üçün şərait yaradır."
+msgstr ""
+
+#: sanitar/templates/index.html:40
+msgid "Mətbəxlərdə yağlı kanallarin "
+msgstr ""
+
+#: sanitar/templates/index.html:42
+msgid ""
+"Yağlı kanal içərisinə toplanmış yağ açıq alov alaraq yanması nəticəsində "
+"yaranan istilik 10000 C-dən yüksək olur və bu yanğın  riskini artırır."
+msgstr ""
+
+#: sanitar/templates/index.html:44
+msgid "tüstü bacalarının mütəmadi təmizlənməsi"
+msgstr ""
+
+#: sanitar/templates/index.html:46
+msgid ""
+"Bütün bu işlər xüsusi müasir cihaz-avadanlıqlar və ən əsası peşəkar mühəndis-"
+"texniki heyət tərəfindən icra olunur."
+msgstr ""
+
+#: sanitar/templates/index.html:48
+msgid "Dezinseksiya"
+msgstr ""
+
+#: sanitar/templates/index.html:50
+msgid ""
+"infeksion xəstəlikləri yayan həşəratların tələf edilməsidir.Dezinseksiya həm "
+"məişətdə, həm də epidemiyaların qarşısını almaq üçün aparılır."
+msgstr ""
+
+#: sanitar/templates/index.html:52
+msgid "Dezodorasiya"
+msgstr ""
+
+#: sanitar/templates/index.html:54
+msgid ""
+"Dezodarasiya xidməti (aromatizasiya) olduğu halda obyektdə olan kəskin "
+"xoşagəlməz qoxuların aradan qaldırılmasıdır."
+msgstr ""
+
+#: sanitar/templates/index.html:56
+msgid "Temizlenme (Clining) Xidmeti"
+msgstr ""
+
+#: sanitar/templates/index.html:79
+msgid "Xidmətlərimiz"
+msgstr "Наши сервисы"
+
+#~ msgid "Kategoriyalar"
+#~ msgstr "Продукты"
