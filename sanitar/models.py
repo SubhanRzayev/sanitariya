@@ -16,7 +16,7 @@ class About(models.Model):
     
     
 class Image(models.Model):
-    image = models.ImageField(upload_to = 'media/team_image')
+    image = models.ImageField(upload_to= 'team_image')
     
         
     
