@@ -20,6 +20,7 @@ class IndexView(ListView):
         context = super().get_context_data(**kwargs)
         context["product_list"] = Product.objects.filter(is_published=True)[:4]
         context['services_list'] = Services.objects.filter(is_published = True)[:4]
+        context['image_list'] = Image.objects.all()
         return context
 
 class AboutView(ListView):

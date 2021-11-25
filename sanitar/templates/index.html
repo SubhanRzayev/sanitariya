@@ -16,7 +16,9 @@
      <div class="carousel-inner">
      
         <div class="carousel-item active">
-        <img class="d-block w-100" src="{% static 'img/hero/inner-hero.jpg' %}" alt="First slide">
+        {% for i in image_list %}
+        <img class="d-block w-100" src="{{i.image.url}}" alt="First slide">
+        {% endfor %}
     </div>
 </div>
     <div class="container">

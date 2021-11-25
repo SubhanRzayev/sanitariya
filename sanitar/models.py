@@ -15,3 +15,13 @@ class About(models.Model):
         return self.title
     
     
+class Image(models.Model):
+    image = models.ImageField(upload_to = 'media/team_image')
+    
+    class Meta:
+        verbose_name_plural = "Image"
+        
+    def __str__(self):
+        return self.id
+    
+        
