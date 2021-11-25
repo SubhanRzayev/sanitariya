@@ -7,4 +7,6 @@ from sanitar.models import *
 @admin.register(About)
 class AboutAdmin(admin.ModelAdmin):
     list_display = ('title','about_image','description',)
+    
+admin.site.register(Image)
 
