@@ -22,10 +22,16 @@ from django.utils import timezone
 
     
 class Services(models.Model):
-    title = models.CharField(max_length=100)
-    description = models.CharField(max_length=1000,default="Write the text")
-    cover_image = models.ImageField(upload_to = 'media/services_image')
-    is_published =models.BooleanField(default=False)
+    title = models.CharField(max_length=100, verbose_name="Başlıq")
+    description = models.CharField(max_length=1000, default="Write the text", verbose_name="Ətraflı məlumat")
+    cover_image = models.ImageField(upload_to = 'media/services_image', verbose_name="Şəkil")
+    is_published =models.BooleanField(default=False, verbose_name="Saytda göstərilir?")
+
+
+
+    class Meta:
+        verbose_name = "Xidmət"
+        verbose_name_plural = "Xidmətlər"
 
 
     def __str__(self):

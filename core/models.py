@@ -7,10 +7,10 @@ from django.utils import timezone
 class Blog(models.Model):
 
     # information
-    title = models.CharField(max_length=60)
-    cover_image = models.ImageField(upload_to = "media/blog_cover_image")
-    description = models.CharField(max_length=1000)
-    is_published = models.BooleanField(default=False)
+    title = models.CharField(max_length=60, verbose_name="Başlıq")
+    cover_image = models.ImageField(upload_to = "media/blog_cover_image", verbose_name="Şəkil")
+    description = models.CharField(max_length=1000, verbose_name="Ətraflı məlumat")
+    is_published = models.BooleanField(default=False, verbose_name="Saytda göstərilir?")
 
 
     # moderations
@@ -27,6 +27,14 @@ class Blog(models.Model):
         return reverse('core:blog_detail',args=[self.pk])
 
 
+
+    class Meta:
+        verbose_name = "Xəbər"
+        verbose_name_plural = "Xəbərlər"
+
+
+
+
 class Contact(models.Model):
     name = models.CharField(max_length=100)
     email = models.EmailField(max_length=100)
@@ -40,13 +48,21 @@ class Contact(models.Model):
         return self.name
 
 
+    class Meta:
+        verbose_name = "Əlaqə mesajı"
+        verbose_name_plural = "Əlaqə mesajları"
+
+
 
 class Information(models.Model):
-    street = models.CharField(max_length=100)
-    address = models.CharField(max_length=100)
-    phone = models.IntegerField(default='+994 55 400 16 09',)
+    street = models.CharField(max_length=100, verbose_name="Küçə")
+    address = models.CharField(max_length=100, verbose_name="Ünvan")
+    phone = models.IntegerField(default='+994 55 400 16 09', verbose_name="Telefon")
 
     def __str__(self):
         return self.street
     
 
+    class Meta:
+        verbose_name = "Əlaqə məlumatları"
+        verbose_name_plural = "Əlaqə məlumatları"
