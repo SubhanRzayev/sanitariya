@@ -11,8 +11,16 @@ class About(models.Model):
     about_image = models.ImageField(upload_to = 'about_image', verbose_name="Şəkil")
     description = models.TextField(max_length=1000, verbose_name="Ətraflı məlumat")
 
+
+    class Meta:
+        verbose_name = "Haqqımızda"
+        verbose_name_plural = "Haqqımızda"
+
+
+
     def __str__(self):
         return self.title
+
     
     
 class Image(models.Model):
