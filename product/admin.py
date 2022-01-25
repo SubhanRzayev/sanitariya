@@ -1,5 +1,5 @@
 from modeltranslation.admin import TranslationAdmin
-from product.models import  Product
+from product.models import *
 from django.contrib import admin
 
 
@@ -26,7 +26,8 @@ class ProductAdmin(TranslationAdmin):
     pass
 
 
-admin.site.register(Product,ProductAdmin)  
+admin.site.register(Product, ProductAdmin)
+admin.site.register(Category)
 
 
     

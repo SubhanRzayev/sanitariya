@@ -66,7 +66,7 @@
                 <div class="lang">
                     <form action="{% url 'set_language' %}" method="post">  {#2#}
                         {% csrf_token %}  {#3#}
-                        <select name="language">  {#4#}
+                        <select name="language" class="lng">  {#4#}
                             {% get_current_language as LANGUAGE_CODE %}  {#5#}
                             {% get_available_languages as LANGUAGES %}  {#6#}
                             {% get_language_info_list for LANGUAGES as languages %}  {#7#}
@@ -76,7 +76,7 @@
                                 </option>
                             {% endfor %}
                         </select>
-                        <input type="submit" value="Change" style="padding:0px 5px;">
+                        <!-- <input type="submit" value="Change" style="padding:0px 5px;"> -->
                     </form>
                 </div>
                     
@@ -149,3 +149,4 @@
 
 
 </header>
+
